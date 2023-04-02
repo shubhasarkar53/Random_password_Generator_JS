@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="display-container">
+                <input readonly placeholder="Password" class="display" data-passwordDisplay >
+              
+                <button class="copy-btn" data-copy>
+                    <!-- //Copied! -->
+                    <span class="popup" data-copyMsg ></span> 
+                    <i class="copy-icon"><img src="img/copying.png" width="20px"  alt="C" ></i>
+                </button>
+            </div>
+
+            <div class="input-container">
+
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-lengthNumber>0</p>
+                </div>
+
+            <!-- Slider -->
+            <div class="slider-container">
+                <input type="range" min="1" max="20" class="slider" step="1">
+            </div>
+
+            <!-- checkbox -->
+
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+
+            <!-- Strength-container -->
+            <div class="strength-container">
+                <p>Strength</p>
+                <!-- for circle color -->
+                <div class="light" data-indecator></div>
+            </div>
+
+            <!-- generate password -->
+            <button class="generateButton">Generate Password</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
